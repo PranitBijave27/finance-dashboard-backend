@@ -1,7 +1,7 @@
 const User = require("../models/user.model");
 const ApiError = require("../utils/ApiError");
 
-// GET /api/users
+// GET: /api/users
 const getAllUsers = async (req, res, next) => {
   try {
     const filter = {};
@@ -23,7 +23,7 @@ const getAllUsers = async (req, res, next) => {
   }
 };
 
-// PATCH /api/users/:id/role
+// PATCH: /api/users/:id/role
 const updateRole = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id);
@@ -45,7 +45,7 @@ const updateRole = async (req, res, next) => {
   }
 };
 
-// PATCH /api/users/:id/status
+// PATCH: /api/users/:id/status
 const updateStatus = async (req, res, next) => {
   try {
     const user = await User.findById(req.params.id);

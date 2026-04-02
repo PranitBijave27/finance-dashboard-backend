@@ -1,6 +1,6 @@
 const Record = require("../models/record.model");
 
-// GET /api/dashboard/summary
+// GET: /api/dashboard/summary
 const getSummary = async (req, res, next) => {
   try {
     const result = await Record.aggregate([
@@ -43,7 +43,7 @@ const getSummary = async (req, res, next) => {
   }
 };
 
-// GET /api/dashboard/categories
+// GET: /api/dashboard/categories
 const getCategoryTotals = async (req, res, next) => {
   try {
     const result = await Record.aggregate([
@@ -74,7 +74,7 @@ const getCategoryTotals = async (req, res, next) => {
   }
 };
 
-// GET /api/dashboard/trends
+// GET: /api/dashboard/trends
 const getMonthlyTrends = async (req, res, next) => {
   try {
     const currentYear = new Date().getFullYear();
@@ -98,7 +98,7 @@ const getMonthlyTrends = async (req, res, next) => {
       { $sort: { "_id.month": 1 } },
     ]);
 
-    // build a clean 12 month structure
+    // months record
     const months = [
       "January", "February", "March", "April",
       "May", "June", "July", "August",
@@ -132,7 +132,7 @@ const getMonthlyTrends = async (req, res, next) => {
   }
 };
 
-// GET /api/dashboard/recent
+// GET: /api/dashboard/recent
 const getRecentActivity = async (req, res, next) => {
   try {
     const records = await Record.find()

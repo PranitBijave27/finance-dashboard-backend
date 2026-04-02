@@ -1,7 +1,7 @@
 const Record = require("../models/record.model");
 const ApiError = require("../utils/ApiError");
 
-// GET /api/records
+// GET: /api/records
 const getAllRecords = async (req, res, next) => {
   try {
     const filter = {};
@@ -33,7 +33,7 @@ const getAllRecords = async (req, res, next) => {
   }
 };
 
-// GET /api/records/:id
+// GET: /api/records/:id
 const getRecordById = async (req, res, next) => {
   try {
     const record = await Record.findById(req.params.id).populate(
@@ -53,7 +53,7 @@ const getRecordById = async (req, res, next) => {
   }
 };
 
-// POST /api/records
+// POST: /api/records
 const createRecord = async (req, res, next) => {
   try {
     const { amount, type, category, date, notes } = req.body;
@@ -76,7 +76,7 @@ const createRecord = async (req, res, next) => {
   }
 };
 
-// PATCH /api/records/:id
+// PATCH: /api/records/:id
 const updateRecord = async (req, res, next) => {
   try {
     const record = await Record.findById(req.params.id);
@@ -104,7 +104,7 @@ const updateRecord = async (req, res, next) => {
   }
 };
 
-// DELETE /api/records/:id
+// DELETE: /api/records/:id
 const deleteRecord = async (req, res, next) => {
   try {
     const record = await Record.findById(req.params.id);

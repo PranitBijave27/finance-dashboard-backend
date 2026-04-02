@@ -27,7 +27,7 @@ const authenticate = async (req, res, next) => {
       return next(new ApiError(403, "Your account has been deactivated."));
     }
 
-    req.user = user;
+    req.user = user; //attaching user
     next();
   } catch (err) {
     return next(new ApiError(401, "Invalid or expired token."));
