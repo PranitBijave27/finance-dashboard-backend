@@ -19,7 +19,7 @@ A backend system for a finance dashboard built with **Node.js**, **Express**, an
 ## Folder Structure
 
 ```
-finance-dashboard/
+finance-dashboard-backend/
 ├── src/
 │   ├── config/
 │   │   ├── db.js               # MongoDB connection
@@ -61,7 +61,7 @@ finance-dashboard/
 
 ```bash
 git clone https://github.com/PranitBijave27/finance-dashboard-backend
-cd finance-dashboard
+cd finance-dashboard-backend
 ```
 
 ### 2. Install dependencies
@@ -90,8 +90,8 @@ npm run seed
 ```
 
 This creates:
-- **Email:** admin@finance.com
-- **Password:** admin123
+- email address for admin
+- password for admin
 
 ### 5. Start the server
 
