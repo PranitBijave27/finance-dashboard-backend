@@ -60,7 +60,7 @@ finance-dashboard/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/PranitBijave27/finance-dashboard-backend
 cd finance-dashboard
 ```
 
